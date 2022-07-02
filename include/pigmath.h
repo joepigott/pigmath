@@ -20,7 +20,7 @@ typedef unsigned long long uint64_t;
 
 // Uses Newton's method of computing the roots of functions.
 double pig_sqrt(double value) {
-    if (value < 1) return -1;
+    if (value < 0) return -1;
     if (value == 0 || value == 1) return value;
 
     // Initial Estimate.
@@ -39,10 +39,10 @@ double pig_sqrt(double value) {
 // the relatively low floating point accuracy of the function, but I'll still
 // leave the option.
 double pig_sqrt_i(double value, uint8_t iterations) {
-    if (value < 1) return -1;
+    if (value < 0) return -1;
     if (value == 0 || value == 1) return value;
 
-    // Root must be lower than value, so start at half.
+    // Root must be lower than value (for value > 1), so start at half.
     double x = value / 2;
 
     for (uint8_t i = 0; i < iterations; i++) {
