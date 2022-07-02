@@ -14,7 +14,7 @@ library is restricted to the C family.
 
 This section is solely dedicated to the usage of the functions in PigMath. If
 you would like to learn more about implementation, please visit the
-[implementation docs](implementation.md)
+[implementation docs](implementation.md).
 
 ### `pig_sqrt(double value)`
 

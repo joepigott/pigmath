@@ -5,6 +5,8 @@
 An open source, lightweight, header-only math library written in C. Nothing to
 hide; all function declarations are fully visible and documented.
 
+For more information on usage and implementation, see the [documentation](documentation/documentation.md).
+
 ## Use
 
 PigMath is a header-only library. The header file `pigmath.h` is located in the
