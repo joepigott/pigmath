@@ -13,8 +13,6 @@ USE: the dot operator must be used, as namespaces are not native to C. For
 
 */
 
-#include <stdio.h>
-
 #ifndef PIGMATH_H
 #define PIGMATH_H
 
@@ -34,13 +32,17 @@ double pig_sqrt(double value) {
     double x = 1;
 
     for (uint8_t i = 0; i < 10; i++) {
-        //
+        // Root is computed by subtracting the current guess with the function
+        // over its derivative. This quickly approaches the root.
         x -= ((x * x) - value) / (2 * x);
     }
 
     return x;
 }
 
+// Allows for custom number of iterations. 10 is usually more than enough for
+// the relatively low floating point accuracy of the function, but I'll still
+// leave the option.
 double pig_sqrt_i(double value, uint8_t iterations) {
     if (value < 1) return -1;
     if (value == 0 || value == 1) return value;
@@ -54,6 +56,17 @@ double pig_sqrt_i(double value, uint8_t iterations) {
     }
 
     return x;
+}
+
+// For floor and ceil functions, if a floating point number is required it is
+// on the user to cast the return value.
+
+int pig_floor(double value) {
+    return (int)value;
+}
+
+int pig_ceil(double value) {
+    return (int)(value + 1);
 }
 
 // -----------------------------------------

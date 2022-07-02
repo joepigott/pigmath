@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 int main() {
-    printf("%f\n", pig_sqrt_i(10.0f, 3));
-    printf("%f\n", pig_sqrt_i(10.0f, 5));
-    printf("%f\n", pig_sqrt(10.0f));
+    printf("pig_sqrt(10): %f\n", pig_sqrt(10));
+    printf("pig_floor(8.75f): %f\n", pig_floor(8.75f));
+    printf("pig_ceil(8.75f): %f\n", pig_ceil(8.75f));
 
     return 0;
 }
