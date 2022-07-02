@@ -6,11 +6,6 @@ absolutely necessary such as square root functions, trig functions, etc.
 I got so sick of having to use bloated math libraries of which I only used a few
 functions, so I decided to write my own. It's good practice anyway.
 
-USE: the dot operator must be used, as namespaces are not native to C. For
-     example:
-
-     sqrt: `pig.sqrt(x)`
-
 */
 
 #ifndef PIGMATH_H

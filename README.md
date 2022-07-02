@@ -2,7 +2,8 @@
 
 ## Purpose
 
-A free to use, lightweight, header-only math library written in C.
+An open source, lightweight, header-only math library written in C. Nothing to
+hide; all function declarations are fully visible and documented.
 
 ## Use
 
