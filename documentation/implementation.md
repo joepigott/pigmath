@@ -8,7 +8,7 @@ The square root functions in PigMath are implemented using Newton's method. In o
 
 Newton's method is a fairly quick way to compute the roots of *any* function, and provides a very simple way to implement square root functions. An initial guess x<sub>1</sub> is required, which is currently defined as half of the given value. The next guess x<sub>2</sub> is computed by subtracting the function over its derivative from x<sub>1</sub>. In general, x<sub>n+1</sub> = x<sub>n</sub> - f(x)/f'(x). This process is repeated over a number of iterations (can be specified by user in `pig_sqrt_i()`).
 
-This process essentially finds the root of the tangent line of x<sup>2</sup> at its current iteration. One of these computations can be visualized:
+This process essentially finds the root of the tangent line of x<sup>2</sup> at its current iteration, and uses that root as the starting point for the next iteration. One of these computations can be visualized:
 
 ![Newton's Method Visual](images/newtons_method.png)
 
