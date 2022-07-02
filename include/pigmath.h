@@ -42,8 +42,8 @@ double pig_sqrt_i(double value, uint8_t iterations) {
     if (value < 1) return -1;
     if (value == 0 || value == 1) return value;
 
-    // Initial Estimate.
-    double x = 1;
+    // Root must be lower than value, so start at half.
+    double x = value / 2;
 
     for (uint8_t i = 0; i < iterations; i++) {
         //
