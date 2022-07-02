@@ -11,3 +11,21 @@ Newton's method is a fairly quick way to compute the roots of *any* function, an
 This process essentially finds the root of the tangent line of x<sup>2</sup> at its current iteration. One of these computations can be visualized:
 
 ![Newton's Method Visual](images/newtons_method.png)
+
+The full implementation of the functions can be found in the [PigMath header file](../include/pigmath.h)
+
+### Floors and Ceilings
+
+`pig_floor(double value)` and `pig_ceil(double value)`
+
+The floor and ceiling values in PigMath are implemented simply by casting `value` and `value + 1` to `int` and losing all floating point information:
+
+    int pig_floor(double value) {
+        return (int)value;
+    }
+
+    int pig_ceil(double value) {
+        return (int)(value + 1);
+    }
+
+To some purists, this loss of information is something to be avoided, but floor and ceiling functions lose information by definition.
